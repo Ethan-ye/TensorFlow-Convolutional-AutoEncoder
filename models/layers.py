@@ -16,7 +16,10 @@ class Layer(object, metaclass=ABCMeta):
         raise NotImplementedError
 
     def __call__(self, *args, **kwargs):
-        return self.call(*args, **kwargs)
+        layer = self.call(*args, **kwargs)
+        print(layer.__str__())
+        return layer
+        # return self.call(*args, **kwargs)
 
 
 class Convolution2D(Layer):
