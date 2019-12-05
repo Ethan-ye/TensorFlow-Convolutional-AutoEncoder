@@ -204,7 +204,7 @@ class UnPooling(Layer):
                                         kernel,
                                         output_shape=self.output_shape,
                                         strides=(1, kernel_rows, kernel_cols, 1),
-                                        padding='VALID')
+                                        padding='SAME')
         # TODO test!!!
         return unpool
 
